@@ -1,13 +1,141 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portafolio</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/public/Logo.ico" />
+  <link rel="stylesheet" href="less/main.less">
+  <script src="/src/main.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portafolio</title>
+</head>
+
+<body>
+  <div class="container-loader">
+    <div class="loader">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+  <header>
+    <img src="/public/imgs/Logo-header.png" alt="Logo Portafolio">
+
+    <div class="menu-toggle">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+
+    <nav aria-label="Navegación principal">
+      <button class="close-menu">X</button>
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#sobreMi">Sobre mí</a></li>
+        <li><a href="#habilidades">Habilidades</a></li>
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class="inicio" id="inicio">
+      <div class="inicio_container">
+        <img class="inicio_img" src="/public/imgs/foto-perfil.png" alt="Foto de Mia">
+        <div class="inicio_text">
+          <h1 class="inicio_name">Daniel Gomez</h1>
+          <p class="inicio_description">Futuro Desarrollador Web Front-End.</p>
+        </div>
+      </div>
+    </section>
+    <section class="sobre-mi" id="sobreMi">
+      <h2 class="sobre_titulo">Sobre Mí</h2>
+      <p class="sobre_texto">
+        Soy Daniel Gomez, apasionada por el desarrollo web y la tecnología. Me encanta crear
+        experiencias digitales atractivas y funcionales. Siempre estoy aprendiendo nuevas
+        tecnologías para mejorar mis habilidades como desarrolladora Front-End. Aspiro conseguir empleo en el
+        mundo del Desarrollo Web, adquirir experiencia, nuevos conocimientos y fortalecer mi vida profesional.
+      </p>
+    </section>
+
+    <section class="habilidades" id="habilidades">
+      <h2 class="habilidades_titulo">Habilidades</h2>
+
+      <div class="habilidades_container">
+        <div class="habilidad">
+          <img src="/public/imgs/icon-html.png" alt="HTML">
+          <p>HTML 5</p>
+        </div>
+
+        <div class="habilidad">
+          <img src="/public/imgs/icon-css.png" alt="CSS">
+          <p>CSS 3</p>
+        </div>
+
+        <div class="habilidad">
+          <img src="/public/imgs/icon-js.png" alt="JavaScript">
+          <p>JavaScript</p>
+        </div>
+
+        <div class="habilidad">
+          <img src="/public/imgs/icon-github-hab.png" alt="GitHub">
+          <p>GitHub</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="proyectos" id="proyectos">
+      <h2 class="proyectos_titulo">Mis Proyectos</h2>
+
+      <div class="proyectos_container">
+        <div class="proyecto">
+          <img src="/public/imgs/Tecnitours.png" alt="Proyecto 1">
+          <h3>Tecnitours</h3>
+          <p>Este proyecto se llevó a cabo para una empresa de agencias de viajes, cuyo objetivo principal es
+            promover destinos turísticos de manera accesible y sostenible. La página web fue diseñada para
+            ofrecer una experiencia de usuario intuitiva y atractiva, permitiendo a los visitantes explorar
+            opciones de viaje, realizar reservas y obtener información sobre destinos.</p>
+          <a href="https://github.com/Daniel-Gomez03/tecnitours" target="_blank" class="btn-proyecto">Ver
+            Proyecto</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="contacto" id="contacto">
+      <h2 class="contacto_titulo">Contáctame</h2>
+
+      <form class="contacto_form">
+        <div class="input_group">
+          <label for="nombre">Nombre</label>
+          <input type="text" id="nombre" name="nombre" required>
+        </div>
+
+        <div class="input_group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="input_group">
+          <label for="asunto">Asunto</label>
+          <input type="text" id="asunto" name="asunto" required>
+        </div>
+
+        <div class="input_group">
+          <label for="mensaje">Mensaje</label>
+          <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+        </div>
+
+        <button type="submit" class="btn-enviar">Enviar</button>
+      </form>
+    </section>
+
+    <section class="footer">
+      <footer>
+        <p>&copy; 2025 Daniel Gomez. Todos los derechos reservados</p>
+      </footer>
+    </section>
+  </main>
+</body>
+
+
 </html>

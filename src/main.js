@@ -1,24 +1,28 @@
-import './style.css'
-import javascriptLogo from './javascript.svg'
-import viteLogo from '/vite.svg'
-import { setupCounter } from './counter.js'
+//Pantalla de carga
+window.addEventListener('load', () => {
+  const contenedorLoader = document.querySelector('.container-loader');
+  contenedorLoader.style.opacity = 0;
+  contenedorLoader.style.visibility = 'hidden';
+})
 
-document.querySelector('#app').innerHTML = `
-  <div>
-    <a href="https://vite.dev" target="_blank">
-      <img src="${viteLogo}" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-      <img src="${javascriptLogo}" class="logo vanilla" alt="JavaScript logo" />
-    </a>
-    <h1>Hello Vite!</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
-    </div>
-    <p class="read-the-docs">
-      Click on the Vite logo to learn more
-    </p>
-  </div>
-`
+//Menu de hamburguesa para vista de movil y tablet
+document.addEventListener("DOMContentLoaded", function () {
+  const menuToggle = document.querySelector(".menu-toggle");
+  const nav = document.querySelector("nav");
+  const overlay = document.createElement("div");
+  const closeMenu = document.querySelector(".close-menu");
 
-setupCounter(document.querySelector('#counter'))
+  overlay.classList.add("overlay");
+  document.body.appendChild(overlay);
+
+  function toggleMenu() {
+      nav.classList.toggle("nav-active");
+      overlay.classList.toggle("overlay-active");
+      menuToggle.style.display = nav.classList.contains("nav-active") ? "none" : "flex";
+  }
+
+  menuToggle.addEventListener("click", toggleMenu);
+  overlay.addEventListener("click", toggleMenu);
+  closeMenu.addEventListener("click", toggleMenu);
+});
+

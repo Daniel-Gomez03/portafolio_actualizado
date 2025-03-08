@@ -1,0 +1,25 @@
+@import "variables.less";
+
+.grid-container {
+    display: grid;
+    grid-gap: 20px;
+    width: 100%;
+
+    &.grid-2col {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    &.grid-3col {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    &.grid-4col {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    @media (max-width: 720px) {
+        &.grid-responsive {
+            grid-template-columns: 1fr;  
+        }
+    }
+}
